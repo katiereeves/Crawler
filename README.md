@@ -1,6 +1,6 @@
 # Crawler
 ### Project Details
-This is an ongoing project, so please bear with me.
+This is an ongoing project, so it may go through many iterations.
 I'm currently exploring web crawling and indexing pages.
 This will be the foundation for a potential future search engine.
 
