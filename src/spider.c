@@ -74,7 +74,7 @@ void backtrack(char *alphabet, char *prev_str, int index, list *result, int n, C
 
     for(int i = index; i < strlen(alphabet); i++){
         buff[strlen(prev_str)] = alphabet[i];
-        buff[strlen(prev_str) + 1] = '\0'; // null-terminator
+        buff[strlen(prev_str) + 1] = '\0';
         backtrack(alphabet, buff, i, result, n, curl);
     }
 
