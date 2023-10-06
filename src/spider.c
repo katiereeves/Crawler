@@ -20,8 +20,8 @@ char *generate_url(char *url){
 void check_valid_url(const char *str, CURL *curl, char *name){
     CURLcode res;
 
-    curl_easy_setopt(curl, CURLOPT_FOLLOWLOCATION, 1L); // handle 301...
     curl_easy_setopt(curl, CURLOPT_URL, str);
+    curl_easy_setopt(curl, CURLOPT_FOLLOWLOCATION, 1L); // handle 301...
     curl_easy_setopt(curl, CURLOPT_TIMEOUT, 4L); // skip hanging URL after 4 seconds
 
     char *filepath = malloc(strlen(name) + strlen("archive/.html"));
