@@ -39,12 +39,13 @@ void check_valid_url(const char *str, CURL *curl, char *name){
     res = curl_easy_perform(curl);
     fclose(fptr);
 
-    if (res != CURLE_OK){
+    if(res != CURLE_OK){
         /* Not great for a SSD to do consecutive writes
          * Although SSDs are not partically meant for this..
          * Also reduncant
          */
         remove(filepath);
+        free(filepath);
         return;
     }
     printf("%s: URL is indexable.\n", str);
@@ -91,7 +92,7 @@ int main(){
     }
 
     // Index all pages with a domain of 4-5 in length
-    for(int i = 4; i <= 5; i++) {
+    for(int i = 4; i <= 5; i++){
         list *head = malloc(sizeof(list));
         head->next = NULL;
 
