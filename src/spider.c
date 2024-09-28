@@ -14,7 +14,7 @@ char *generate_url(char *url){
     return result;
 }
 
-/* Somewhat patchworky 
+/* Somewhat patchworky
  * Planning to eliminate redundancies
  */
 void check_valid_url(const char *str, CURL *curl, char *name){
