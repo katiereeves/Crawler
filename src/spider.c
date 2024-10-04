@@ -86,7 +86,7 @@ int main(){
     CURL *curl;
 
     curl = curl_easy_init();
-    if (!curl) {
+    if(!curl){
         fprintf(stderr, "Failed to initialize libcurl.\n");
         return 1;
     }
